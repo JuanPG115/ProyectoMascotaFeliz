@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d202b;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-bottom: 2px;
+}
+
+.contenedor-main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  color: #121212;
+  display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "registro-mascota registro-propietario registro-veterinario"
+    "consultar-mascota consultar-mascota consultar-listado-mascotas";
+}
+
+.contenedor-main .registro-mascota,
+.contenedor-main .registro-propietario,
+.contenedor-main .registro-veterinario,
+.contenedor-main .consultar-mascota,
+.contenedor-main .consultar-listado-mascotas {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 90%;
+}
+
+.contenedor-main .registro-mascota {
+  grid-area: registro-mascota;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/registro-mascota-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.registro-mascota:hover,
+.registro-propietario:hover,
+.registro-veterinario:hover,
+.consultar-mascota:hover,
+.consultar-listado-mascotas:hover {
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.contenedor-main p:hover {
+  cursor: pointer;
+}
+
+.contenedor-main .registro-propietario {
+  grid-area: registro-propietario;
+  min-height: 200px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/registro-propietario-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor-main .registro-veterinario {
+  grid-area: registro-veterinario;
+  min-height: 200px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/registro-medico-veterinario-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor-main .consultar-mascota {
+  grid-area: consultar-mascota;
+  min-height: 200px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/consultar-mascota-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contenedor-main .consultar-listado-mascotas {
+  grid-area: consultar-listado-mascotas;
+  min-height: 200px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/consular-listado-mascotas-background.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  border-top: 1px solid white;
+  color: white;
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+  background-color: #212121;
+}
