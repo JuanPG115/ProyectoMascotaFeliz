@@ -17,14 +17,13 @@ namespace MascotaFeliz.App.Consola
             Console.WriteLine("Mascotas \n");
             var mascota = new Mascota
             {
-                Id = 12,
-                Nombre = "Bill",
+                Nombre = "Billss",
                 Color = "Morgan",
                 Especie = "Gato",
                 Raza = "Siames",
             };
             AddMascota(mascota);
-            //deleteMascota(2002);
+            //deleteMascota(6);
             /*getMascota(5);
             getAllMascotas();
             var mascotita = new Mascota
