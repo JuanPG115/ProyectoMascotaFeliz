@@ -1,0 +1,12 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.DetalleMascotaModel
+@{
+    ViewData["Title"]="Detalle-mascota";
+}
+
+<h3>@Model.mascota.Id</h3>
+<h3>@Model.mascota.Nombre</h3>
+<h3>@Model.mascota.Color</h3>
+<h3>@Model.mascota.Especie</h3>
+<h3>@Model.mascota.Raza</h3>
+<a asp-page="./Mascotas">VOLVER</a>

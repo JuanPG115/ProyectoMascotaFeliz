@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio - Mascota Feliz";
+}
+
+<link rel="stylesheet" href="~/css/Index.cshtml.css" />
+<div class="container">
+    <header class="header">
+        <h1>Bienvenido a Mascota Feliz</h1>
+    </header>
+    <div class="contenedor-main">
+        <a asp-page="Pages.Mascotas/Mascotas"class="registro-mascota">
+            <p>Mascotas</p>
+        </a>
+        <a asp-page="/Pages.Duenos/Duenos" class="registro-propietario">
+            <p>Propietarios</p>
+        </a>
+        <a asp-page="/Pages.Veterinarios/Veterinarios" class="registro-veterinario">
+            <p>Veterinarios</p>
+        </a>
+    </div>
+</div>

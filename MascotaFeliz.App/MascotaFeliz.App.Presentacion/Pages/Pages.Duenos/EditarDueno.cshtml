@@ -1,0 +1,43 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.EditarDuenoModel
+@{
+}
+
+
+<link rel="stylesheet" href="~/css/css.duenos/Add-duenos.css" />
+<div class="container">
+  <header class="header">
+    <h1>@Model.nombrePage</h1>
+  </header>
+  <form method="post" class="contenedor-main">
+     <input type="hidden" asp-for="dueno.Id" name="id" />
+    <div>
+      <label asp-for="dueno.Nombres" for="nombres">Nombres: </label>
+      <input asp-for="dueno.Nombres" type="text" name="nombres" />
+    </div>
+    <div>
+      <label asp-for="dueno.Apellidos" for="apellidos">Apellidos: </label>
+      <input asp-for="dueno.Apellidos" type="text" name="apellidos" />
+    </div>
+
+    <div>
+      <label asp-for="dueno.Direccion" for="direccion">Dirección: </label>
+      <input asp-for="dueno.Direccion" type="text" name="direccion" />
+    </div>
+
+    <div>
+      <label asp-for="dueno.Telefono" for="telefono">Teléfono: </label>
+      <input asp-for="dueno.Telefono" type="text" name="telefono" />
+    </div>
+    <div>
+      <label asp-for="dueno.Correo" for="correo">Correo: </label>
+      <input asp-for="dueno.Correo" type="text" name="correo" />
+    </div>
+    <div>
+      <button class="button-enviar" type="submit">Guardar</button>
+    </div>
+    <div>
+      <a class="btn-volver" asp-page="./Duenos"> Volver </a>
+    </div>
+  </form>
+</div>

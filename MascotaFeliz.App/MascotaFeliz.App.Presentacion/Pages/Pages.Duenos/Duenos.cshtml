@@ -1,0 +1,58 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.DuenosModel
+@{
+    ViewData["Title"] = "Dueños";
+}
+
+<link rel="stylesheet" href="~/css/css.duenos/duenos.css">
+<div class="container">
+    <div class="filtros">
+        <div class="busca-id">
+            <label for="buscar-id">Buscar por id:</label>
+            <input type="text" name="buscar-id" />
+            <button class="btn-filtro">Buscar</button>
+        </div>
+        <div class="busca-nombre">
+            <label for="buscar-nombre">Filtrar por nombre:</label>
+            <input type="text" name="buscar-nombre" />
+            <button class="btn-filtro">Filtrar</button>
+        </div>
+    </div>
+    <table summary="Propietarios">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dueno in Model.listaDuenos)
+            {
+                <tr>
+                    <th scope="row">@dueno.Id</th>
+                    <td>@dueno.Nombres</td>
+                    <td>@dueno.Apellidos</td>
+                    <td>@dueno.Direccion</td>
+                    <td>@dueno.Telefono</td>
+                    <td>@dueno.Correo</td>
+                    <td>
+                        <a asp-page="./DetalleMascota" asp-route-mascotaId="@dueno.Id" class="btn-editar">Detalle</a><a asp-page="./EditarDueno" asp-route-duenoId="@dueno.Id" class="btn-borrar">Editar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="container-add-pet">
+    <a class="btn-volver" asp-page="../Index"> Volver </a>
+    <a class="btn-add" asp-page="./EditarDueno">+</a>
+    <h2>Propietarios</h2>
+</div>
+
+
+
