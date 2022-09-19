@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj": {}
+    "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj": {}
   },
   "projects": {
-    "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+    "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
+        "projectUniqueName": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
         "projectName": "MascotaFeliz.App.Dominio",
-        "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
+        "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\jupgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\obj\\",
+        "outputPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jupgo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+    "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
         "projectName": "MascotaFeliz.App.Persistencia",
-        "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\jupgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\obj\\",
+        "outputPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jupgo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-                "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+              "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+                "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
               }
             }
           }
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj": {
+    "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj",
+        "projectUniqueName": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj",
         "projectName": "MascotaFeliz.App.Presentacion",
-        "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj",
+        "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Presentacion\\MascotaFeliz.App.Presentacion.csproj",
         "packagesPath": "C:\\Users\\jupgo\\.nuget\\packages\\",
-        "outputPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Presentacion\\obj\\",
+        "outputPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Presentacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jupgo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -160,11 +160,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-                "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+              "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+                "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
               },
-              "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
-                "projectPath": "C:\\Mascotas\\mascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
+              "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+                "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
               }
             }
           }

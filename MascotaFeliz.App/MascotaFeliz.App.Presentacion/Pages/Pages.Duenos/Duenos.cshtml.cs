@@ -21,5 +21,12 @@ namespace MascotaFeliz.App.Presentacion.Pages
         {
             listaDuenos = _repoDueno.GetAllDuenos();
         }
+
+        public IActionResult OnPostBorrar(int duenoId)//Cuando la página se abre, se llena la lista
+        {
+            _repoDueno.DeleteDueno(duenoId);
+            OnGet();
+            return Page();
+        }
     }
 }

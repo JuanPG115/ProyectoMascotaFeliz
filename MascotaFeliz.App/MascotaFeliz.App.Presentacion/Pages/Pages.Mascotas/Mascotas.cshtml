@@ -4,13 +4,13 @@
     ViewData["Title"] = "Mascotas";
 }
 
-<link rel="stylesheet" href="~/css/css.mascotas/mascotas.css" />
+<link rel="stylesheet" href="~/css/lista.css" />
 <div class="container">
     <div class="filtros">
         <div class="busca-id">
             <label for="buscar-id">Buscar por id:</label>
             <input type="text" name="buscar-id" />
-            <button class="btn-filtro">Buscar</button>
+            <button type="submit" class="btn-filtro">Buscar</button>
         </div>
         <div class="busca-nombre">
             <label for="buscar-nombre">Filtrar por nombre:</label>
@@ -26,9 +26,6 @@
                 <th scope="col">Color</th>
                 <th scope="col">Especie</th>
                 <th scope="col">Raza</th>
-                <th scope="col">Dueño</th>
-                <th scope="col">Veterinario</th>
-                <th scope="col">Historia</th>
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -37,17 +34,19 @@
             {
 
 
-                <tr>
+                <tr class="filas-lista">
                     <th scope="row">@mascota.Id</th>
                     <td>@mascota.Nombre</td>
                     <td>@mascota.Color</td>
                     <td>@mascota.Especie</td>
                     <td>@mascota.Raza</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a asp-page="./DetalleMascota" asp-route-mascotaId="@mascota.Id" class="btn-editar">Detalle</a><a asp-page="./EditarMascota" asp-route-mascotaId="@mascota.Id" class="btn-borrar">Editar</a>
+                    <td class="actions">
+                        <button class="btn-detalle"><a asp-page="./DetalleMascota"
+                            asp-route-mascotaId="@mascota.Id">Detalle</a></button>
+                        <button class="btn-editar"><a asp-page="./EditarMascota"
+                            asp-route-mascotaId="@mascota.Id">Editar</a></button>
+                        <form method ="post"><button type="submit" asp-page-handler="Borrar" asp-route-mascotaId="@mascota.Id"
+                            class="btn-borrar">Borrar</button></form>
                     </td>
                 </tr>
             }

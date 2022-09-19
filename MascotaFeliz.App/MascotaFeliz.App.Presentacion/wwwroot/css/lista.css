@@ -14,7 +14,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #e3f2fd;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -44,6 +44,8 @@ body {
   border-radius: 10px;
   margin-right: 5px;
   padding: 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .btn-editar:hover {
@@ -51,16 +53,38 @@ body {
   cursor: pointer;
 }
 
+.btn-detalle {
+  text-decoration: none;
+  background-color: #ff9800;
+  margin-right: 7px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.btn-detalle:hover {
+  background-color: #ffb74d;
+  cursor: pointer;
+}
+
 .btn-borrar {
+  text-decoration: none;
   background-color: #d50000;
   border: none;
   border-radius: 10px;
   padding: 10px;
+  color: black;
 }
 
 .btn-borrar:hover {
   cursor: pointer;
   background-color: #ff1744;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .container-add-pet {
@@ -71,6 +95,7 @@ body {
   height: 100px;
   margin: 10px;
 }
+
 .container-add-pet .btn-add {
   text-decoration: none;
   font-size: 60px;
@@ -153,16 +178,23 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid #1565c0;
+  border: 2px solid #1565c0;
 }
 
 th,
-td {
-  padding: 20px;
-  border: 3px solid #1565c0;
+td,
+tr {
+  padding: 5px;
+  border: 2px solid #1565c0;
 }
 
-tr:hover {
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filas-lista:hover {
   background-color: #bbdefb;
 }
 

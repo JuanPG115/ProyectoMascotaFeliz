@@ -4,7 +4,7 @@
     ViewData["Title"] = "Dueños";
 }
 
-<link rel="stylesheet" href="~/css/css.duenos/duenos.css">
+<link rel="stylesheet" href="~/css/lista.css">
 <div class="container">
     <div class="filtros">
         <div class="busca-id">
@@ -31,20 +31,27 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach (var dueno in Model.listaDuenos)
             {
-                <tr>
+                <tr class="filas-lista">
                     <th scope="row">@dueno.Id</th>
                     <td>@dueno.Nombres</td>
                     <td>@dueno.Apellidos</td>
                     <td>@dueno.Direccion</td>
                     <td>@dueno.Telefono</td>
                     <td>@dueno.Correo</td>
-                    <td>
-                        <a asp-page="./DetalleMascota" asp-route-mascotaId="@dueno.Id" class="btn-editar">Detalle</a><a asp-page="./EditarDueno" asp-route-duenoId="@dueno.Id" class="btn-borrar">Editar</a>
+                    <td class="actions">
+                        <button class="btn-detalle"><a asp-page="./DetalleDueno"
+                            asp-route-duenoId="@dueno.Id">Detalle</a></button>
+                        <button class="btn-editar"><a asp-page="./EditarDueno"
+                            asp-route-duenoId="@dueno.Id">Editar</a></button>
+                        <form method="post"><button type="submit" asp-page-handler="Borrar" asp-route-duenoId="@dueno.Id"
+                            class="btn-borrar">Borrar</button></form>
                     </td>
                 </tr>
             }
+
         </tbody>
     </table>
 </div>
@@ -53,6 +60,3 @@
     <a class="btn-add" asp-page="./EditarDueno">+</a>
     <h2>Propietarios</h2>
 </div>
-
-
-
