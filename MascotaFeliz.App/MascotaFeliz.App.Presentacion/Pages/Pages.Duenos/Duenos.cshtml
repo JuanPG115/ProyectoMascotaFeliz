@@ -5,6 +5,7 @@
 }
 
 <link rel="stylesheet" href="~/css/lista.css">
+<script src="https://kit.fontawesome.com/05b4673db6.js" crossorigin="anonymous"></script>
 <div class="container">
     <div class="filtros">
         <div class="busca-id">
@@ -42,12 +43,14 @@
                     <td>@dueno.Telefono</td>
                     <td>@dueno.Correo</td>
                     <td class="actions">
-                        <button class="btn-detalle"><a asp-page="./DetalleDueno"
-                            asp-route-duenoId="@dueno.Id">Detalle</a></button>
-                        <button class="btn-editar"><a asp-page="./EditarDueno"
-                            asp-route-duenoId="@dueno.Id">Editar</a></button>
-                        <form method="post"><button type="submit" asp-page-handler="Borrar" asp-route-duenoId="@dueno.Id"
-                            class="btn-borrar">Borrar</button></form>
+                            <button class="btn-detalle"><a class="a-detalle fa-solid fa-eye" asp-page="./DetalleDueno"
+                            asp-route-duenoId="@dueno.Id"></a></button>
+                        <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square" asp-page="./EditarDueno"
+                            asp-route-duenoId="@dueno.Id"></a></button>
+                        <form method="post"><button asp-page-handler="Borrar" asp-route-duenoId="@dueno.Id"
+                            class="btn-borrar"><i class="a-borrar fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
             }
@@ -58,5 +61,5 @@
 <div class="container-add-pet">
     <a class="btn-volver" asp-page="../Index"> Volver </a>
     <a class="btn-add" asp-page="./EditarDueno">+</a>
-    <h2>Propietarios</h2>
+    <h2>Dueños</h2>
 </div>

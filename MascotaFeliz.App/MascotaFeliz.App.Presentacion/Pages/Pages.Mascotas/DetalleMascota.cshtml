@@ -1,47 +1,50 @@
 ﻿@page
 @model MascotaFeliz.App.Presentacion.Pages.DetalleMascotaModel
 @{
-    ViewData["Title"] = "Detalle mascota";
+    ViewData["Title"] = "Mostrar mascota";
 }
 
-<link rel="stylesheet" href="~/css/add-edit.css" />
+<link rel="stylesheet" href="~/css/Add-edit.css" />
 <div class="container">
-    <header class="header">
-        <h1>Detalle mascota</h1>
-    </header>
-    <form method="post" action="" class="contenedor-main">
+  <header class="header">
+    <h1>Mostrar mascota</h1>
+  </header>
+  <form method="post" class="contenedor-main">
+     <input type="hidden" asp-for="mascota.Id"/>
+    <div>
+      <label asp-for="mascota.Nombre">Nombre: </label>
+      <input asp-for="mascota.Nombre" type="text"disabled/>
+    </div>
+    <div>
+      <label asp-for="mascota.Color">Color: </label>
+      <input asp-for="mascota.Color" type="text"disabled/>
+    </div>
 
-        <div>
-            <label><strong>Id: </strong> @Model.mascota.Id</label>
-        </div>
-        <div>
-            <label><strong>Nombre: </strong> @Model.mascota.Nombre</label>
-        </div>
-        <div>
-            <label><strong>Color: </strong> @Model.mascota.Color</label>
-        </div>
+    <div>
+      <label asp-for="mascota.Especie">Especie: </label>
+      <input asp-for="mascota.Especie" type="text"disabled/>
+    </div>
 
-        <div>
-            <label><strong>Especie: </strong> @Model.mascota.Especie</label>
-        </div>
-
-        <div>
-            <label><strong>Raza: </strong> @Model.mascota.Raza</label>
-        </div>
-        <div>
-            <label><strong>Dueño: </strong> @Model.mascota.Dueno</label>
-        </div>
-        <div>
-            <label><strong>Veterinario: </strong> @Model.mascota.Veterinario</label>
-        </div>
-        <div>
-            <label><strong>Historia: </strong> @Model.mascota.Historia</label>
-        </div>
-        <br>
-        <br>
-        <div>
-
-            <a class="btn-volver" asp-page="./Mascotas"> Volver </a>
-        </div>
-    </form>
+    <div>
+      <label asp-for="mascota.Raza">Raza: </label>
+      <input asp-for="mascota.Raza" type="text"disabled/>
+    </div>
+    <div>
+      <label asp-for="mascota.Dueno">Dueño: </label>
+      <input asp-for="mascota.Dueno" type="text" disabled/>
+    </div>
+    <div>
+      <label asp-for="mascota.Veterinario">Veterinario: </label>
+      <input asp-for="mascota.Veterinario" type="text" disabled/>
+    </div>
+    <div>
+      <label asp-for="mascota.Historia">Historia Clinica: </label>
+      <input asp-for="mascota.Historia" type="text" disabled/>
+    </div>
+    <br>
+    <br>
+    <div>
+      <a class="btn-volver" asp-page="./Mascotas"> Volver </a>
+    </div>
+  </form>
 </div>

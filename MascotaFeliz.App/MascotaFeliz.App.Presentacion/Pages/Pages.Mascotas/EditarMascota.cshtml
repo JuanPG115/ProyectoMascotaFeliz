@@ -1,7 +1,6 @@
 ﻿@page
 @model MascotaFeliz.App.Presentacion.Pages.EditarMascotaModel
 @{
-    int mascotaId = Model.mascota.Id;
     ViewData["Title"] = @Model.nombrePage;
 }
 
@@ -12,25 +11,25 @@
     </header>
     <form method="post" action="" class="contenedor-main">
 
-        <input type="hidden" asp-for="mascota.Id" name="id" />
+        <input type="hidden" asp-for="mascota.Id"/>
 
         <div>
-            <label asp-for="mascota.Nombre" for="nombre">Nombre: </label>
-            <input asp-for="mascota.Nombre" type="text" name="nombre" />
+            <label asp-for="mascota.Nombre">Nombre: </label>
+            <input asp-for="mascota.Nombre" type="text"/>
         </div>
         <div>
-            <label asp-for="mascota.Color" for="color">Color: </label>
-            <input asp-for="mascota.Color" type="text" name="color" />
-        </div>
-
-        <div>
-            <label asp-for="mascota.Especie" for="especie">Especie: </label>
-            <input asp-for="mascota.Especie" type="text" name="especie" />
+            <label asp-for="mascota.Color">Color: </label>
+            <input asp-for="mascota.Color" type="text"/>
         </div>
 
         <div>
-            <label asp-for="mascota.Raza" for="raza">Raza: </label>
-            <input asp-for="mascota.Raza" type="text" name="raza" />
+            <label asp-for="mascota.Especie">Especie: </label>
+            <input asp-for="mascota.Especie" type="text"/>
+        </div>
+
+        <div>
+            <label asp-for="mascota.Raza">Raza: </label>
+            <input asp-for="mascota.Raza" type="text"/>
         </div>
 
         <div>

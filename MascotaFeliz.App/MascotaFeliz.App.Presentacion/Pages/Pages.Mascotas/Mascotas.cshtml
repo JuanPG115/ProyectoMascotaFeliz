@@ -5,12 +5,15 @@
 }
 
 <link rel="stylesheet" href="~/css/lista.css" />
+<script src="https://kit.fontawesome.com/05b4673db6.js" crossorigin="anonymous"></script>
 <div class="container">
     <div class="filtros">
         <div class="busca-id">
-            <label for="buscar-id">Buscar por id:</label>
-            <input type="text" name="buscar-id" />
-            <button type="submit" class="btn-filtro">Buscar</button>
+            <form>
+                <label asp-for="BuscarId">Buscar por id:</label>
+                <input type="text" asp-for="BuscarId" />
+                <button type="submit" class="btn-filtro">Buscar</button>
+            </form>
         </div>
         <div class="busca-nombre">
             <label for="buscar-nombre">Filtrar por nombre:</label>
@@ -41,12 +44,14 @@
                     <td>@mascota.Especie</td>
                     <td>@mascota.Raza</td>
                     <td class="actions">
-                        <button class="btn-detalle"><a asp-page="./DetalleMascota"
-                            asp-route-mascotaId="@mascota.Id">Detalle</a></button>
-                        <button class="btn-editar"><a asp-page="./EditarMascota"
-                            asp-route-mascotaId="@mascota.Id">Editar</a></button>
-                        <form method ="post"><button type="submit" asp-page-handler="Borrar" asp-route-mascotaId="@mascota.Id"
-                            class="btn-borrar">Borrar</button></form>
+                        <button class="btn-detalle"><a class="a-detalle fa-solid fa-eye" asp-page="./DetalleMascota"
+                            asp-route-mascotaId="@mascota.Id"></a></button>
+                        <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square" asp-page="./EditarMascota"
+                            asp-route-mascotaId="@mascota.Id"></a></button>
+                        <form method="post"><button asp-page-handler="Borrar" asp-route-mascotaId="@mascota.Id"
+                            class="btn-borrar"><i class="a-borrar fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                     </td>
                 </tr>
             }

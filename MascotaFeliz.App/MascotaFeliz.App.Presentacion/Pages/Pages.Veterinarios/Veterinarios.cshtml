@@ -1,4 +1,65 @@
 ﻿@page
 @model MascotaFeliz.App.Presentacion.Pages.VeterinariosModel
 @{
+    ViewData["Title"] = "Veterinarios";
 }
+
+<link rel="stylesheet" href="~/css/lista.css">
+<script src="https://kit.fontawesome.com/05b4673db6.js" crossorigin="anonymous"></script>
+<div class="container">
+    <div class="filtros">
+        <div class="busca-id">
+            <label for="buscar-id">Buscar por id:</label>
+            <input type="text" name="buscar-id" />
+            <button class="btn-filtro">Buscar</button>
+        </div>
+        <div class="busca-nombre">
+            <label for="buscar-nombre">Filtrar por nombre:</label>
+            <input type="text" name="buscar-nombre" />
+            <button class="btn-filtro">Filtrar</button>
+        </div>
+    </div>
+    <table summary="Propietarios">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Tarjerta profesional</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var veterinario in Model.listaVeterinarios)
+            {
+                <tr class="filas-lista">
+                    <th scope="row">@veterinario.Id</th>
+                    <td>@veterinario.Nombres</td>
+                    <td>@veterinario.Apellidos</td>
+                    <td>@veterinario.Direccion</td>
+                    <td>@veterinario.Telefono</td>
+                    <td>@veterinario.TarjetaProfesional</td>
+                    <td class="actions">
+                        <button class="btn-detalle"><a class="a-detalle fa-solid fa-eye" asp-page="./DetalleVeterinario"
+                            asp-route-veterinarioId="@veterinario.Id"></a></button>
+                        <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square" asp-page="./EditarVeterinario"
+                            asp-route-veterinarioId="@veterinario.Id"></a></button>
+                        <form method="post"><button asp-page-handler="Borrar" asp-route-veterinarioId="@veterinario.Id"
+                            class="btn-borrar"><i class="a-borrar fa-solid fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+<div class="container-add-pet">
+    <a class="btn-volver" asp-page="../Index"> Volver </a>
+    <a class="btn-add" asp-page="./EditarVeterinario">+</a>
+    <h2>Veterinarios</h2>
+</div>

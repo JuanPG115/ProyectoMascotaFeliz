@@ -1,4 +1,43 @@
 ﻿@page
 @model MascotaFeliz.App.Presentacion.Pages.DetalleVeterinarioModel
 @{
+  ViewData["Title"] = "Mostrar Veterinario";
 }
+
+
+<link rel="stylesheet" href="~/css/Add-edit.css" />
+<div class="container">
+  <header class="header">
+    <h1>Mostrar veterinario</h1>
+  </header>
+  <form method="post" class="contenedor-main">
+     <input type="hidden" asp-for="veterinario.Id"/>
+    <div>
+      <label asp-for="veterinario.Nombres">Nombres: </label>
+      <input asp-for="veterinario.Nombres" type="text" disabled/>
+    </div>
+    <div>
+      <label asp-for="veterinario.Apellidos">Apellidos: </label>
+      <input asp-for="veterinario.Apellidos" type="text" disabled/>
+    </div>
+
+    <div>
+      <label asp-for="veterinario.Direccion">Dirección: </label>
+      <input asp-for="veterinario.Direccion" type="text" disabled/>
+    </div>
+
+    <div>
+      <label asp-for="veterinario.Telefono">Teléfono: </label>
+      <input asp-for="veterinario.Telefono" type="text" disabled/>
+    </div>
+    <div>
+      <label asp-for="veterinario.TarjetaProfesional">Tarjeta Profesional: </label>
+      <input asp-for="veterinario.TarjetaProfesional" type="text" disabled/>
+    </div>
+    <br>
+    <br>
+    <div>
+      <a class="btn-volver" asp-page="./Veterinarios"> Volver </a>
+    </div>
+  </form>
+</div>

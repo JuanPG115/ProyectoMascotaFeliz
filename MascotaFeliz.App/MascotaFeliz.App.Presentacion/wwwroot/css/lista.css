@@ -36,55 +36,74 @@ body {
   width: 100%;
   justify-content: center;
   padding: 20px;
-}
-
-.btn-editar {
-  background-color: #64dd17;
-  border: none;
-  border-radius: 10px;
-  margin-right: 5px;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.btn-editar:hover {
-  background-color: #76ff03;
-  cursor: pointer;
+  border-radius: 5px;
 }
 
 .btn-detalle {
-  text-decoration: none;
-  background-color: #ff9800;
-  margin-right: 7px;
-  border: none;
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 5px;
+  /*height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  background-color: #1e88e5;
+  border-radius: 5px;
+  font-size: 30px;*/
 }
 
-.btn-detalle:hover {
-  background-color: #ffb74d;
-  cursor: pointer;
+.btn-editar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 5px;
+  /*margin-right: 5px;
+  background-color: #1e88e5;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 30px;*/
 }
 
 .btn-borrar {
-  text-decoration: none;
-  background-color: #d50000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  /*background-color: #1e88e5;
   border: none;
-  border-radius: 10px;
-  padding: 10px;
-  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 30px;*/
 }
 
-.btn-borrar:hover {
+.btn-detalle:hover, .btn-borrar:hover, .btn-editar:hover {
   cursor: pointer;
-  background-color: #ff1744;
+  background-color: #2196f3;
 }
 
-a {
+.a-detalle {
   text-decoration: none;
+  font-size: 30px;
   color: black;
+}
+.a-edit{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+}
+.a-borrar{
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  padding: 10px;
 }
 
 .container-add-pet {
