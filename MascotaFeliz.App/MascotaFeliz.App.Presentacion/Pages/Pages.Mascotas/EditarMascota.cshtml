@@ -11,25 +11,46 @@
     </header>
     <form method="post" action="" class="contenedor-main">
 
-        <input type="hidden" asp-for="mascota.Id"/>
+        <input type="hidden" asp-for="mascota.Id" />
 
         <div>
             <label asp-for="mascota.Nombre">Nombre: </label>
-            <input asp-for="mascota.Nombre" type="text"/>
+            <input asp-for="mascota.Nombre" type="text" />
         </div>
         <div>
             <label asp-for="mascota.Color">Color: </label>
-            <input asp-for="mascota.Color" type="text"/>
+            <input asp-for="mascota.Color" type="text" />
         </div>
 
         <div>
             <label asp-for="mascota.Especie">Especie: </label>
-            <input asp-for="mascota.Especie" type="text"/>
+            <input asp-for="mascota.Especie" type="text" />
         </div>
 
         <div>
             <label asp-for="mascota.Raza">Raza: </label>
-            <input asp-for="mascota.Raza" type="text"/>
+            <input asp-for="mascota.Raza" type="text" />
+        </div>
+
+        <div>
+            <label asp-for="mascota.Dueno.Id">Dueño:</label>
+            <select asp-for="mascota.Dueno.Id" name="duenoId">
+                @foreach (var dueno in Model.listaDuenos)
+                {
+                    <option value="@dueno.Id">@dueno.Nombres @dueno.Apellidos</option>
+                }
+
+            </select>
+        </div>
+
+        <div>
+            <label asp-for="mascota.Veterinario.Id">Veterinario:</label>
+            <select asp-for="mascota.Veterinario.Id" name = "VeterinarioId">
+                @foreach (var veterinario in Model.listaVeterinarios)
+                {
+                    <option value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos</option>
+                }
+            </select>
         </div>
 
         <div>

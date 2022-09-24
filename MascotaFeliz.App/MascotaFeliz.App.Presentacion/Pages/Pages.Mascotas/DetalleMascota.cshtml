@@ -2,6 +2,8 @@
 @model MascotaFeliz.App.Presentacion.Pages.DetalleMascotaModel
 @{
     ViewData["Title"] = "Mostrar mascota";
+    //String nombreD = Model.mascota.Dueno.Nombres + " " + Model.mascota.Dueno.Apellidos;
+    //String nombreV = Model.mascota.Veterinario.Nombres + " " + Model.mascota.Veterinario.Apellidos;
 }
 
 <link rel="stylesheet" href="~/css/Add-edit.css" />
@@ -30,12 +32,12 @@
       <input asp-for="mascota.Raza" type="text"disabled/>
     </div>
     <div>
-      <label asp-for="mascota.Dueno">Dueño: </label>
-      <input asp-for="mascota.Dueno" type="text" disabled/>
+      <label asp-for="mascota.Dueno.Nombres">Dueño: </label>
+      <input asp-for="mascota.Dueno.Nombres" type="text" disabled/>
     </div>
     <div>
-      <label asp-for="mascota.Veterinario">Veterinario: </label>
-      <input asp-for="mascota.Veterinario" type="text" disabled/>
+      <label asp-for="mascota.Veterinario.Nombres">Veterinario: </label>
+      <input asp-for="mascota.Veterinario.Nombres" type="text" disabled/>
     </div>
     <div>
       <label asp-for="mascota.Historia">Historia Clinica: </label>

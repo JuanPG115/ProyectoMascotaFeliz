@@ -37,6 +37,17 @@ body {
 }
 
 .container div input {
+  width: 200px;
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #1565c0;
+  outline: none;
+  background-color: #e3f2fd;
+}
+select{
+  width: 200px;
   color: gray;
   font-size: 15px;
   padding: 5px;
