@@ -9,16 +9,14 @@
 <div class="container">
     <div class="filtros">
         <div class="busca-id">
-            <label for="buscar-id">Buscar por id:</label>
-            <input type="text" name="buscar-id" />
-            <button class="btn-filtro">Buscar</button>
-        </div>
-        <div class="busca-nombre">
-            <label for="buscar-nombre">Filtrar por nombre:</label>
-            <input type="text" name="buscar-nombre" />
-            <button class="btn-filtro">Filtrar</button>
+            <form>
+                <label asp-for="BuscarId">Buscar por nombre:</label>
+                <input type="text" asp-for="BuscarId" />
+                <button type="submit" class="btn-filtro">Buscar</button>
+            </form>
         </div>
     </div>
+    @if(Model.listaVeterinarios.Count() > 0){
     <table summary="Propietarios">
         <thead>
             <tr>
@@ -45,9 +43,10 @@
                     <td class="actions">
                         <button class="btn-detalle"><a class="a-detalle fa-solid fa-eye" asp-page="./DetalleVeterinario"
                             asp-route-veterinarioId="@veterinario.Id"></a></button>
-                        <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square" asp-page="./EditarVeterinario"
-                            asp-route-veterinarioId="@veterinario.Id"></a></button>
-                        <form method="post"><button asp-page-handler="Borrar" asp-route-veterinarioId="@veterinario.Id"
+                        <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square"
+                            asp-page="./EditarVeterinario" asp-route-veterinarioId="@veterinario.Id"></a></button>
+                        <form method="post"><button asp-page-handler="Borrar" 
+                        asp-route-veterinarioId="@veterinario.Id"
                             class="btn-borrar"><i class="a-borrar fa-solid fa-trash"></i>
                             </button>
                         </form>
@@ -57,6 +56,9 @@
 
         </tbody>
     </table>
+    }else{
+        <p>No hay veterinarios para mostrar</p>
+    }
 </div>
 <div class="container-add-pet">
     <a class="btn-volver" asp-page="../Index"> Volver </a>

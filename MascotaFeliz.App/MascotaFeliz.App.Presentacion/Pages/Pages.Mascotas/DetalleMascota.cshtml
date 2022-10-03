@@ -40,8 +40,13 @@
       <input asp-for="mascota.Veterinario.Nombres" type="text" disabled/>
     </div>
     <div>
-      <label asp-for="mascota.Historia">Historia Clinica: </label>
-      <input asp-for="mascota.Historia" type="text" disabled/>
+      @if(Model.mascota.Historia != null){
+      <label asp-for="mascota.Historia.FechaInicial">Historia Clinica: </label>
+      <input asp-for="mascota.Historia.FechaInicial" type="text" disabled/>
+      }else{
+        <label>Historia Clinica: </label>
+      <input value="No hay" type="text" disabled/>
+      }
     </div>
     <br>
     <br>

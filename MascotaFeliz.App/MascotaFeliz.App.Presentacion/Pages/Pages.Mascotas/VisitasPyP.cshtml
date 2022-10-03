@@ -1,0 +1,65 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.VisitasPyPModel
+@{
+  ViewData["Title"]="Historia clinica";
+}
+
+<link rel="stylesheet" href="~/css/visitas.css">
+
+<div class="container">
+  <div class="filtros">
+    <div class="busca-id">
+      <a class="btn-editarv" asp-page="./EditarHistoria" asp-route-historiaId="@Model.historia.Id">Editar historia</a>
+    </div>
+    <div class="busca-id">
+      <form method="post"><button type="submit" class="btn-borrarv" asp-page-handler="Borrar"
+          asp-route-historiaId="@Model.historia.Id">Borrar historia</button></form>
+    </div>
+  </div>
+
+  @if (Model.listaVisitas.Count() > 0)
+  {
+    @foreach (var visita in Model.listaVisitas)
+    {
+      <div class="form-div" type="get">
+        <div class="form-rows">
+          <label for="">Id: </label><input value="@visita.Id" type="text" disabled />
+          <label for="">Fecha: </label><input value="@visita.Fecha"="text" disabled />
+          <label for="">Temperatura:</label><input value="@visita.Temperatura" type="text" disabled />
+          <label for="">Peso:</label><input value="@visita.Peso" type="text" disabled />
+        </div>
+        <div class="form-rows">
+          <label for="">Frecuencia respiratoria:</label><input value="@visita.FrecuenciaRespiratoria" type="text"
+        disabled />
+
+          <label for="">Frecuencia cardiaca:</label><input value="@visita.FrecuenciaCardiaca" type="text" disabled />
+
+          <label for="">Estado de ánimo:</label><input value="@visita.EstadoDeAnimo" type="text" disabled />
+        </div>
+        <div class="form-rows">
+          <label for="">Veterinario: </label><input value="@visita.Veterinario.Nombres" type="text" disabled />
+          <label for="">Recomendaciones: </label><textarea disabled>@visita.Recomendaciones</textarea>
+        </div>
+        <div class="form-rows">
+          <label for="">Id: </label><input value="@visita.Historia.Id" type="text" disabled />
+        </div>
+        <div class="buttons">
+          <a asp-route-idVisita="@visita.Id" asp-page="./EditarVisita">Editar</a>
+          <form method="post"><button type="submit" asp-page-handler="BorrarVisita" asp-route-visitaId="@visita.Id" class="btn-borrar">
+            Borrar</button>
+          </form>
+        </div>
+
+      </div>
+    }
+  }
+  else
+  {
+    <p>No hay historias para mostrar</p>
+  }
+</div>
+<div class="container-add-pet">
+  <a class="btn-volver" href="./mascotas"> Volver </a>
+  <a asp-page="./AddVisitasPyP" class="btn-add" asp-route-historiaId="@Model.historia.Id">+</a>
+  <h2>Visitas PyP</h2>
+</div>

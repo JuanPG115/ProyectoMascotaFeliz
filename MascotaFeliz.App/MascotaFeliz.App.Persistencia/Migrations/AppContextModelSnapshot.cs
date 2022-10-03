@@ -125,9 +125,6 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<int?>("HistoriaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdVeterinario")
-                        .HasColumnType("int");
-
                     b.Property<float>("Peso")
                         .HasColumnType("real");
 
@@ -137,9 +134,14 @@ namespace MascotaFeliz.App.Persistencia.Migrations
                     b.Property<float>("Temperatura")
                         .HasColumnType("real");
 
+                    b.Property<int?>("VeterinarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("HistoriaId");
+
+                    b.HasIndex("VeterinarioId");
 
                     b.ToTable("VisitasPyP");
                 });
@@ -187,14 +189,17 @@ namespace MascotaFeliz.App.Persistencia.Migrations
 
             modelBuilder.Entity("MascotaFeliz.App.Dominio.VisitasPyP", b =>
                 {
-                    b.HasOne("MascotaFeliz.App.Dominio.Historia", null)
-                        .WithMany("VisitasPyP")
+                    b.HasOne("MascotaFeliz.App.Dominio.Historia", "Historia")
+                        .WithMany()
                         .HasForeignKey("HistoriaId");
-                });
 
-            modelBuilder.Entity("MascotaFeliz.App.Dominio.Historia", b =>
-                {
-                    b.Navigation("VisitasPyP");
+                    b.HasOne("MascotaFeliz.App.Dominio.Veterinario", "Veterinario")
+                        .WithMany()
+                        .HasForeignKey("VeterinarioId");
+
+                    b.Navigation("Historia");
+
+                    b.Navigation("Veterinario");
                 });
 #pragma warning restore 612, 618
         }

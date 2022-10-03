@@ -154,6 +154,7 @@ C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Duenos\DetalleDueno.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Duenos\Duenos.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Duenos\EditarDueno.cshtml.g.cs
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\AddHistoria.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\DetalleMascota.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\EditarMascota.cshtml.g.cs
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\Mascotas.cshtml.g.cs
@@ -172,3 +173,7 @@ C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Presentacion.dll
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Presentacion.pdb
 C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\MascotaFeliz.App.Presentacion.genruntimeconfig.cache
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\AddVisitasPyP.cshtml.g.cs
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\VisitasPyP.cshtml.g.cs
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\EditarHistoria.cshtml.g.cs
+C:\Mascotas\MascotaFeliz.App\MascotaFeliz.App.Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pages.Mascotas\EditarVisita.cshtml.g.cs

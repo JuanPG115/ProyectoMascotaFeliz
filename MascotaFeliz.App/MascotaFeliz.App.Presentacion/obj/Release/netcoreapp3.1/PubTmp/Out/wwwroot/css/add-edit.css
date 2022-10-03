@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #e3f2fd;
+}
+
+.container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border-radius: 10px;
+  border: 3px solid #1565c0;
+}
+
+.container header {
+  margin-bottom: 60px;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.container div input {
+  width: 200px;
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #1565c0;
+  outline: none;
+  background-color: #e3f2fd;
+}
+select{
+  width: 200px;
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #1565c0;
+  outline: none;
+  background-color: #e3f2fd;
+}
+.container div .button-enviar {
+  margin-top: 30px;
+  padding: 10px;
+  border: none;
+  width: 100px;
+  background-color: #64dd17;
+  border-radius: 5px;
+  transition: width 0.1s;
+  cursor: pointer;
+}
+
+.container div .button-enviar:hover {
+  background-color: #76ff03;
+}
+
+.btn-volver {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 10px;
+  color: black;
+  font-weight: 600;
+  background-color: #1e88e5;
+  width: 100px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-volver:hover {
+  background-color: #2196f3;
+}
+
+.container div label {
+  display: inline-block;
+  width: 150px;
+}

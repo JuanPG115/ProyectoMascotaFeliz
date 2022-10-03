@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto:wght@100&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: #e3f2fd;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;;
+}
+
+.container {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  height: 500px;
+  border-radius: 10px;
+  border: 3px solid #1565c0;
+  overflow: scroll;
+  width: 1200px;
+}
+
+.container .filtros {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  padding: 20px;
+}
+
+.btn-editar {
+  background-color: #64dd17;
+  border: none;
+  border-radius: 10px;
+  margin-right: 5px;
+  padding: 10px;
+}
+
+.btn-editar:hover {
+  background-color: #76ff03;
+  cursor: pointer;
+}
+
+.btn-borrar {
+  background-color: #d50000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.btn-borrar:hover {
+  cursor: pointer;
+  background-color: #ff1744;
+}
+
+.container-add-pet {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  margin: 10px;
+}
+.container-add-pet .btn-add {
+  text-decoration: none;
+  font-size: 60px;
+  font-weight: 900;
+  color: white;
+  background-color: #64dd17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+
+.container-add-pet .btn-volver {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  background-color: #1e88e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100px;
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+.btn-editarv {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #64dd17;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-editarv:hover{
+  background-color: #76ff03;
+}
+.btn-borrarv {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d50000;
+  text-decoration: none;
+  color: black
+}
+
+.btn-borrarv:hover{
+  background-color: #ff1744;
+}
+
+
+.container-add-pet .btn-volver:hover {
+  background-color: #2196f3;
+}
+
+.container-add-pet .btn-add:hover {
+  background-color: #76ff03;
+}
+
+.container .filtros .busca-id {
+  margin-right: 20px;
+}
+
+.container .filtros .busca-id input {
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #1565c0;
+  outline: none;
+  background-color: #e3f2fd;
+}
+
+.container .filtros .busca-nombre label,
+.container .filtros .busca-id label {
+  color: black;
+  font-weight: bolder;
+}
+
+.container .filtros .busca-nombre input {
+  color: gray;
+  font-size: 15px;
+  padding: 5px;
+  border: none;
+  border-bottom: 3px solid #1565c0;
+  outline: none;
+  background-color: #e3f2fd;
+}
+
+.btn-filtro {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #1e88e5;
+}
+
+.btn-filtro:hover {
+  cursor: pointer;
+  background-color: #2196f3;
+}
+
+
+.form-rows{
+  margin-bottom: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.form-rows label, input{
+  margin-right: 5px;
+}
+
+.form-rows input{
+  background-color: white;
+  color: gray;
+  padding: 3px;
+  outline: none;
+  border-radius: 3px;
+  border: none;
+  font-size: 15px;
+  text-align: center;
+}
+
+.form-rows textarea{
+  width: 550px;
+  height: 60px;
+  resize: none;
+  outline: none;
+  border: none;
+  color: gray;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: white;
+}
+
+.container .buttons{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .buttons a{
+  background-color: lightblue;
+  padding: 7px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.container .buttons a:hover{
+  background-color: #2196f3;
+}
+
+.container .buttons button{
+  background-color: lightcoral;
+  border: none;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .buttons button:hover{
+  background-color: #ff5252;
+}
+
+.form-div{
+  padding: 10px;
+  border: 2px solid #1565c0;
+  margin-bottom: 3px;
+  border-radius: 10px;
+}

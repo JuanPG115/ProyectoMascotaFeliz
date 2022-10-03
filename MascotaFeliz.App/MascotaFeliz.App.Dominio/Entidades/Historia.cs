@@ -6,6 +6,6 @@ namespace MascotaFeliz.App.Dominio
     {
         public int Id { get; set; }
         public DateTime FechaInicial { get; set; }
-        public List<VisitasPyP> VisitasPyP { get; set; }
+        //public List<VisitasPyP> VisitasPyP { get; set; }
     }
 }

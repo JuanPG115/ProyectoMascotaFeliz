@@ -1,0 +1,65 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.AddVisitasPyPModel
+@{
+    ViewData["Title"]="Añadir visita";
+}
+
+<link rel="stylesheet" href="~/css/add-edit.css" />
+<div class="container">
+    <header class="header">
+        <h1>add visita</h1>
+    </header>
+    <form method="post" class="contenedor-main">
+
+        <input type="hidden" asp-for="visita.Historia.Id" value="@Model.historia.Id" name="historiaId">
+
+        <div>
+            <label asp-for="visita.Fecha">Fecha: </label>
+            <input asp-for="visita.Fecha" type="date" />
+        </div>
+        <div>
+            <label asp-for="visita.Temperatura">Temperatura: </label>
+            <input asp-for="visita.Temperatura" type="number" step="any" />
+        </div>
+
+        <div>
+            <label asp-for="visita.Peso">Peso: </label>
+            <input asp-for="visita.Peso" type="number" step="any" />
+        </div>
+
+        <div>
+            <label asp-for="visita.FrecuenciaRespiratoria">Frecuencia respiratoria: </label>
+            <input asp-for="visita.FrecuenciaRespiratoria" type="number" step="any" />
+        </div>
+        <div>
+            <label asp-for="visita.FrecuenciaCardiaca">Frecuencia cardiaca: </label>
+            <input asp-for="visita.FrecuenciaCardiaca" type="number" step="any" />
+        </div>
+        <div>
+            <label asp-for="visita.EstadoDeAnimo">Estado de ánimo: </label>
+            <input asp-for="visita.EstadoDeAnimo" type="text" />
+        </div>
+        <div>
+            <label asp-for="visita.Veterinario.Id">Veterinario:</label>
+            <select asp-for="visita.Veterinario.Id" name = "VeterinarioId">
+                @foreach (var veterinario in Model.listaVeterinarios)
+                {
+                    <option value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos</option>
+                }
+            </select>
+        </div>
+
+        <div>
+            <label asp-for="visita.Recomendaciones">Recomendaciones: </label>
+            <textarea asp-for="visita.Recomendaciones"></textarea>
+        </div>
+
+        <div>
+            <button class="button-enviar" type="submit">Guardar</button>
+        </div>
+
+        <div>
+            <a class="btn-volver" asp-page="./Mascotas"> Volver </a>
+        </div>
+    </form>
+</div>

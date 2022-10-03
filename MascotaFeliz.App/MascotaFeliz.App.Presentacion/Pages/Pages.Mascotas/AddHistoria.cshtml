@@ -1,0 +1,28 @@
+﻿@page
+@model MascotaFeliz.App.Presentacion.Pages.AddHistoriaModel
+@{
+    ViewData["title"] = "Registrar historia";
+}
+
+<link rel="stylesheet" href="~/css/add-edit.css" />
+<div class="container">
+    <header class="header">
+        <h1>Registrar historia</h1>
+    </header>
+    <form method="post" class="contenedor-main">
+
+        <input type="hidden" asp-for="mascota.Id" />
+
+        <div>
+            <label asp-for="historia.FechaInicial">Fecha inicial: </label>
+            <input asp-for="historia.FechaInicial" type="date" />
+        </div>
+
+        <div>
+            <button class="button-enviar" type="submit">Guardar</button>
+        </div>
+        <div>
+            <a class="btn-volver" asp-page="./Mascotas"> Volver </a>
+        </div>
+    </form>
+</div>

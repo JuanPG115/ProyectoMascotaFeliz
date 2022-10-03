@@ -13,7 +13,7 @@ namespace MascotaFeliz.App.Presentacion.Pages
     public class MascotasModel : PageModel
     {
         private readonly IRepositorioMascota _repoMascota;
-        public IEnumerable<Mascota> listaMascotas { get; set; } = default!;
+        public IEnumerable<Mascota> listaMascotas { get; set; }
         public Mascota mascota { get; set; }
 
 

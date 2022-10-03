@@ -10,17 +10,13 @@
     <div class="filtros">
         <div class="busca-id">
             <form>
-                <label asp-for="BuscarId">Buscar por id:</label>
+                <label asp-for="BuscarId">Buscar por nombre:</label>
                 <input type="text" asp-for="BuscarId" />
                 <button type="submit" class="btn-filtro">Buscar</button>
             </form>
         </div>
-        <div class="busca-nombre">
-            <label for="buscar-nombre">Filtrar por nombre:</label>
-            <input type="text" name="buscar-nombre" />
-            <button class="btn-filtro">Filtrar</button>
-        </div>
     </div>
+    @if(Model.listaMascotas.Count() > 0){
     <table summary="Mascotas">
         <thead>
             <tr>
@@ -29,6 +25,7 @@
                 <th scope="col">Color</th>
                 <th scope="col">Especie</th>
                 <th scope="col">Raza</th>
+                <th scope="col">Historia</th>
                 <th scope="col">Acciones</th>
             </tr>
         </thead>
@@ -43,11 +40,33 @@
                     <td>@mascota.Color</td>
                     <td>@mascota.Especie</td>
                     <td>@mascota.Raza</td>
+                    @if (mascota.Historia == null)
+                    {
+                        <td>No hay</td>
+                    }
+                    else
+                    {
+                        <td>@mascota.Historia.FechaInicial</td>
+                    }
+
                     <td class="actions">
                         <button class="btn-detalle"><a class="a-detalle fa-solid fa-eye" asp-page="./DetalleMascota"
                             asp-route-mascotaId="@mascota.Id"></a></button>
                         <button class="btn-editar"><a class="a-edit fa-solid fa-pen-to-square" asp-page="./EditarMascota"
                             asp-route-mascotaId="@mascota.Id"></a></button>
+                        @if (mascota.Historia == null)
+                        {
+                            <button class="btn-editar"><a class="a-edit fa-solid fa-file-contract" asp-page="./AddHistoria"
+                            asp-route-mascotaId="@mascota.Id"></a></button>
+                        }
+                        else
+                        {
+                            <button class="btn-editar"><a class="a-edit fa-solid fa-file-contract" asp-page="./VisitasPyP"
+                            asp-route-mascotaId="@mascota.Id" asp-route-historiaId="@mascota.Historia.Id"></a></button>
+
+
+                        }
+
                         <form method="post"><button asp-page-handler="Borrar" asp-route-mascotaId="@mascota.Id"
                             class="btn-borrar"><i class="a-borrar fa-solid fa-trash"></i>
                             </button>
@@ -57,6 +76,9 @@
             }
         </tbody>
     </table>
+    }else{
+        <p>No hay mascotas para mostrar</p>
+    }
 </div>
 <div class="container-add-pet">
     <a class="btn-volver" asp-page="../Index"> Volver </a>
